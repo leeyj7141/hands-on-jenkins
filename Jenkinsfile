@@ -8,7 +8,7 @@ echo `date`
 sleep 1'''
       }
     }
-    stage('test firefox ') {
+    stage('test ') {
       parallel {
         stage('test firefox ') {
           steps {
@@ -26,7 +26,8 @@ sleep 1'''
         }
         stage('test edge') {
           steps {
-            sh '''echo " test edge" 
+            sh '''echo " test edge"
+exit 1 
 echo `date`
 sleep 1 '''
           }
