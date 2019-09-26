@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('Build test') {
       steps {
-        sh 'echo " building ... "'
+        sh '''echo " building ... "
+echo `date`'''
       }
     }
     stage('test firefox ') {
@@ -11,33 +12,34 @@ pipeline {
         stage('test firefox ') {
           steps {
             sh '''echo "test firefox " 
-date'''
+echo `date `'''
           }
         }
         stage('test chrome ') {
           steps {
             sh '''echo " test chrome " 
-date 
+echo `date`
 '''
           }
         }
         stage('test edge') {
           steps {
             sh '''echo " test edge" 
-date'''
+echo `date`'''
           }
         }
         stage('test IE') {
           steps {
             sh '''test "IE" 
-date '''
+echo `date `'''
           }
         }
       }
     }
     stage('deploy') {
       steps {
-        sh 'echo " deploy" '
+        sh '''echo " deploy" 
+echo `date`'''
       }
     }
   }
